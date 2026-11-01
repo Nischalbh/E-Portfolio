@@ -1,8 +1,46 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %} 
 Home|Nischal Portfolio
 {% endblock %}
 {% block content %}
-<h1>Welcome to My Portfolio</h1>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, deserunt!</p>
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="hero-container">
+        <div class="hero-content">
+            <p class="hero-label">Hello, I'm</p>
+            <h1 class="hero-name">Nischal <span>Bhattarai</span></h1>
+            <h2 class="hero-role">Aspiring Software Developer</h2>
+            <p class="hero-description">I build practical web application using python Django. I'm also passionate about Cloud Computing and Cybersecurity</p>
+            <div class="hero-buttons">
+                <a href="{% url 'projects' %}" class="btn-primary">View My Projects</a>
+                <a href="#" class="btn-secondary">Download CV</a>
+            </div>
+        </div>
+        <div class="hero-image-wrapper">
+            <img src="{% static 'images/1.jpg' %}" alt="Nischal Bhattarai" class="hero-profile-image">
+        </div>
+    </div>
+</section>
+<!-- Skill Preview -->
+<section class="skill-preview">
+    <h2>My Technical Skills</h2>
+</section>
+
+<!-- Featured Project -->
+<section class="featured-project">
+    <h2>Featured Project</h2>
+</section>
+
+<!-- About Preview -->
+<section class="about-preview">
+    <h2>About Me</h2>
+</section>
+
+<!-- Contact CTA -->
+<section class="contact-cta">
+    <h2>Let's Work Together</h2>
+    <p>Have a project in mind or want to collaborate? I'd love to hear from you.</p>
+    <a href="{% url 'about' %}" class="cta-btn">Get In Touch</a>
+</section>
 {% endblock %}
